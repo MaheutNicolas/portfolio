@@ -1,0 +1,42 @@
+@use './variable.scss' as *;
+
+// ------------------------------------------------------------
+// TYPOGRAPHIE
+// ------------------------------------------------------------
+
+body {
+  font-family: $font-mono;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  font-weight: 700;
+  color: $ink;
+}
+ 
+h1 { font-size: $font-hero; }
+h2 { font-size: $font-title; }
+h3 { font-size: $font-highlight; }
+h4 { font-size: $font-highlight; }
+h5 { font-size: $font-text; font-weight: 600; }
+h6 { font-size: $font-small; font-weight: 600; }
+
+p {
+  font-size: $font-text;
+  line-height: 1.75;
+  color: $text;
+}
+
+// Couleurs texte
+.text-accent    { color: $accent; }
+.text-muted     { color: $text-muted; }
+.text-dim       { color: $text-dim; }
+.text-error     { color: $red; }
+
+// Alignement
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.text-left    { text-align: left; }

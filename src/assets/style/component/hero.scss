@@ -1,0 +1,219 @@
+// ============================================================
+// COMPONENT — HERO
+// BEM : .hero
+//       .hero__label
+//       .hero__title
+//       .hero__title-line (--accent)
+//       .hero__subtitle
+//       .hero__actions
+//       .hero__action-primary / __action-secondary
+//       .hero__scroll
+//       .hero__visual
+//       .hero__badge
+// ============================================================
+
+@use '../shared' as *;
+
+.hero {
+    position: relative;
+    min-height: calc(100vh - $header-height);
+    padding-top: calc($header-height + $spacing-xl);
+    padding-bottom: $spacing-xl;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(160deg, $surface 60%, $bg-deep 100%);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -120px;
+        right: -80px;
+        width: 560px;
+        height: 560px;
+        background: radial-gradient(circle, rgba($accent, 0.07) 0%, transparent 65%);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin-inline: auto;
+        padding-inline: $spacing-lg;
+        display: flex;
+        align-items: center;
+        gap: $spacing-xl;
+        text-align: center;
+        height: 100%;
+
+        @include lg {
+
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-md;
+    }
+
+    &__label {
+        display: inline-flex;
+        align-items: center;
+        gap: $spacing-sm;
+        font-family: $font-mono;
+        font-size: $font-small;
+        color: $accent;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        &::before, &::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 2px;
+            background: $accent;
+            border-radius: 99px;
+        }
+
+        @include lg {
+            justify-content: center;
+            margin-inline: auto;
+        }
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-size: $font-hero;
+        font-weight: 700;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+        color: $ink;
+
+        &-line {
+            display: block;
+
+            &--accent {
+                color: $accent;
+                position: relative;
+                width: fit-content;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 4px;
+                    left: 0;
+                    right: 0;
+                    height: 3px;
+                    background: linear-gradient(90deg, $accent, rgba($accent, 0));
+                    border-radius: 99px;
+                }
+
+                @include lg {
+                    margin-inline: auto;
+                }
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: $font-text;
+        color: $text-muted;
+        line-height: 1.75;
+        max-width: 50%;
+
+        @include lg {
+            max-width: 80%;
+            margin-inline: auto;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: $spacing-md;
+        flex-wrap: wrap;
+        margin-top: $spacing-sm;
+
+        @include lg {
+            justify-content: center;
+        }
+    }
+
+    &__action-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: $spacing-sm;
+        padding: 14px $spacing-lg;
+        background: $accent;
+        border: 1px solid $accent;
+        border-radius: $radius-md;
+        font-family: $font-mono;
+        font-size: $font-small;
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 0.04em;
+        transition: background 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+
+        &:hover {
+            background: $accent;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba($accent, 0.3);
+        }
+    }
+
+    &__action-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: $spacing-sm;
+        padding: 13px $spacing-lg;
+        background: transparent;
+        border: 1.5px solid $border2;
+        border-radius: $radius-md;
+        font-family: $font-mono;
+        font-size: $font-small;
+        font-weight: 600;
+        color: $ink;
+        text-decoration: none;
+        letter-spacing: 0.04em;
+        transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
+
+        &:hover {
+            border-color: $accent;
+            color: $accent;
+            background: rgba($accent, 0.04);
+            transform: translateY(-2px);
+        }
+    }
+
+    &__scroll {
+        width: 100%;
+        position: relative;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        &__inner {
+            position: absolute;
+            bottom: $spacing-lg;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $spacing-xs;
+            font-family: $font-mono;
+            font-size: $font-small;
+            color: $text-dim;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            animation: float 3s ease-in-out infinite;
+            transform: translateX(-50%);
+        }
+    }
+}

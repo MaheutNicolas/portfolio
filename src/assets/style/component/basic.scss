@@ -1,0 +1,98 @@
+@use '../shared.scss' as *;
+
+// ------------------------------------------------------------
+// TAGS 
+// ------------------------------------------------------------
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: 3px $spacing-sm;
+  border-radius: $radius-full;
+  font-family: $font-mono;
+  font-size: $font-small;
+  text-transform: uppercase;
+  background: $surface;
+  border: 1px solid $border;
+  color: $text-muted;
+
+  &__accent { background: rgba($accent, 0.1);  border-color: rgba($accent, 0.3);  color: $light-accent; }
+  &__red  { background: rgba($red,  0.1);  border-color: rgba($red,  0.3);  color: $light-red; }
+}
+
+// ------------------------------------------------------------
+// CARDS
+// ------------------------------------------------------------
+
+.card {
+  padding: $spacing-lg;
+
+  &__glass { @include glass; }
+}
+
+// ------------------------------------------------------------
+// DIVIDERS
+// ------------------------------------------------------------
+
+.divider {
+  border: none;
+  border-top: 1px solid $border;
+  margin: $spacing-lg 0;
+
+  &__accent {
+    border-color: rgba($accent, 0.2);
+  }
+}
+
+// ------------------------------------------------------------
+// BUTTTON
+// ------------------------------------------------------------
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-sm;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $radius-md;
+    font-family: $font-display;
+    font-size: $font-small;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &.primary {
+        background: $accent;
+        border: 1px solid $accent;
+        color: $light-accent;
+
+        &:hover {
+            background: rgba($accent, 0.18);
+            border-color: $light-accent;
+            color: $light-accent;
+        }
+    }
+
+    &.light {
+        background: transparent;
+        border: 1px solid $border;
+        color: $text-muted;
+
+        &:hover {
+            border-color: $border2;
+            color: $text;
+            background: $surface;
+        }
+    }
+
+
+    &__icon {
+        padding: $spacing-sm;
+        border-radius: $radius-md;
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}

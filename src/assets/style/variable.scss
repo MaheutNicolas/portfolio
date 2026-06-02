@@ -1,0 +1,76 @@
+// Couleurs
+$bg:          #f9fafb;
+$bg-deep:     #eaecf1; 
+$surface:     #ffffff; 
+$overlay:     rgba(#1a1f2e, 0.45); 
+
+$border:     #dde1ea;
+$border2:    #b0b8cb;
+
+$accent:       #2f6be0;
+$light-accent: #6796f0;
+ 
+$ink:          #0f1724; 
+$light-ink:    #364565;
+
+$green:      #3aab72;
+$light-green:#98f1c5;
+$amber:      #c9893a;
+$light-amber:#f9cb93;
+$red:        #c4504a;
+$light-red:  #ffa6a2;
+
+$text:         #0f1724;
+$text-muted:   #64748b; 
+$text-dim:     #a0aab8;
+$text-inverse: #ffffff;
+
+// Typographie
+$font-display: 'Playfair Display', serif;
+$font-mono:    'IBM Plex Mono', monospace;
+
+// Font Size
+$font-hero:      clamp(44px, 6vw, 60px);
+$font-title:     clamp(20px, 3.5vw, 45px);
+$font-highlight: clamp(17px, 2.2vw, 24px);
+$font-text:      clamp(16px, 1.8vw, 18px);;
+$font-small:     15px;
+
+// Layout
+$header-height: 60px;
+$footer-height: 120px;
+
+// Espacements
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 28px;
+$spacing-xl: 36px;
+
+//radius 
+$radius-xs:   3px;
+$radius-sm:   6px;
+$radius-md:   9px;
+$radius-lg:   12px;
+$radius-full: 50%;
+
+// ------------------------------------------------------------
+// LAYOUT
+// ------------------------------------------------------------
+
+.gap-xs  { gap: $spacing-xs; }
+.gap-sm  { gap: $spacing-sm; }
+.gap-md  { gap: $spacing-md; }
+.gap-lg  { gap: $spacing-lg; }
+.gap-xl  { gap: $spacing-xl; }
+
+// ------------------------------------------------------------
+// EFFECT
+// ------------------------------------------------------------
+
+@mixin glass($opacity: 0.82) {
+  background: rgba(#ffffff, $opacity);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border-bottom: 1px solid $border;
+}
