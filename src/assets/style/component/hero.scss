@@ -1,17 +1,3 @@
-// ============================================================
-// COMPONENT — HERO
-// BEM : .hero
-//       .hero__label
-//       .hero__title
-//       .hero__title-line (--accent)
-//       .hero__subtitle
-//       .hero__actions
-//       .hero__action-primary / __action-secondary
-//       .hero__scroll
-//       .hero__visual
-//       .hero__badge
-// ============================================================
-
 @use '../shared' as *;
 
 .hero {
@@ -47,10 +33,6 @@
         gap: $spacing-xl;
         text-align: center;
         height: 100%;
-
-        @include lg {
-
-        }
     }
 
     &__content {

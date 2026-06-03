@@ -780,4 +780,201 @@ input, textarea {
   text-transform: uppercase;
   animation: float 3s ease-in-out infinite;
   transform: translateX(-50%);
+}
+
+.about {
+  padding-block: 36px;
+  background: #eaecf1;
+  position: relative;
+}
+.about::before {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -60px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(47, 107, 224, 0.06) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+.about__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 28px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+  gap: 36px;
+}
+@media (max-width: 1200px) {
+  .about__inner {
+    grid-template-columns: 1fr;
+  }
+}
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.about__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  color: #0d3c9b;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.about__label::before, .about__label::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background: #2f6be0;
+  border-radius: 99px;
+}
+.about__title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(44px, 6vw, 60px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #0f1724;
+  margin: 0;
+}
+.about__title--accent {
+  color: #0d3c9b;
+}
+.about__bio {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.about__bio-p {
+  font-size: clamp(16px, 1.8vw, 18px);
+  color: #0f1724;
+  line-height: 1.8;
+  margin: 0;
+}
+.about__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 4px;
+}
+.about__tag {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  color: #2f6be0;
+  background: #ffffff;
+  border: 1px solid #2f6be0;
+  border-radius: 9px;
+  padding: 4px 16px;
+  letter-spacing: 0.04em;
+  transition: border-color 200ms ease, color 200ms ease;
+}
+.about__stacks {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 16px;
+}
+@media (max-width: 1200px) {
+  .about__stacks {
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .about__stacks {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.about__stack {
+  border-left: 2px solid #dde1ea;
+  padding-left: 16px;
+  transition: border-color 200ms ease;
+}
+.about__stack:hover {
+  border-color: #0d3c9b;
+}
+.about__stack-label {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  color: #0d3c9b;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.about__stack-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.about__stack-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  color: #0f1724;
+  letter-spacing: 0.02em;
+}
+.about__stack-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #2f6be0;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+.about__stack-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.about__stack-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  color: #0f1724;
+  letter-spacing: 0.02em;
+}
+.about__stack-level {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  color: #0d3c9b;
+  opacity: 0.7;
+  letter-spacing: 0.04em;
+}
+.about__stack-bar {
+  height: 6px;
+  background: #b0b8cb;
+  border-radius: 99px;
+  overflow: hidden;
+  width: 80px;
+}
+.about__stack-fill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #2f6be0, rgba(47, 107, 224, 0.5));
+  border-radius: 99px;
+  transition: width 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }/*# sourceMappingURL=index.css.map */

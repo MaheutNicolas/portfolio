@@ -1,0 +1,240 @@
+// ============================================================
+// COMPONENT — ABOUT
+// BEM : .about
+//       .about__inner
+//       .about__content
+//       .about__label
+//       .about__title (--accent)
+//       .about__bio / .about__bio-p
+//       .about__tags / .about__tag
+//       .about__stacks
+//       .about__stack
+//       .about__stack-label
+//       .about__stack-items / .about__stack-item
+//       .about__stack-dot
+// ============================================================
+
+@use '../shared' as *;
+
+.about {
+    padding-block: $spacing-xl;
+    background: $bg-deep;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -80px;
+        left: -60px;
+        width: 480px;
+        height: 480px;
+        background: radial-gradient(circle, rgba($accent, 0.06) 0%, transparent 65%);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    // ---- Inner ------------------------------------------------
+    &__inner {
+        position: relative;
+        z-index: 1;
+        max-width: 1180px;
+        margin-inline: auto;
+        padding-inline: $spacing-lg;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+        gap: $spacing-xl;
+
+        @include lg {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // ---- Contenu ----------------------------------------------
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
+    }
+
+    &__label {
+        display: inline-flex;
+        align-items: center;
+        gap: $spacing-sm;
+        font-family: $font-mono;
+        font-size: $font-small;
+        color: $dark-accent;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        &::before,
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 2px;
+            background: $accent;
+            border-radius: 99px;
+        }
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-size: $font-hero;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        color: $ink;
+        margin: 0;
+
+        &--accent {
+            color: $dark-accent;
+        }
+    }
+
+    &__bio {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm;
+    }
+
+    &__bio-p {
+        font-size: $font-text;
+        color: $ink;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    // ---- Tags -------------------------------------------------
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacing-sm;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-top: $spacing-xs;
+    }
+
+    &__tag {
+        font-family: $font-mono;
+        font-size: $font-small;
+        color: $accent;
+        background: $surface;
+        border: 1px solid $accent;
+        border-radius: $radius-md;
+        padding: 4px $spacing-md;
+        letter-spacing: 0.04em;
+        transition: border-color 200ms ease, color 200ms ease;
+    }
+
+    // ---- Stacks -----------------------------------------------
+    &__stacks {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-lg;
+        padding-top: $spacing-md;
+
+        @include lg {
+            padding-top: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include md {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__stack {
+        border-left: 2px solid $border;
+        padding-left: $spacing-md;
+        transition: border-color 200ms ease;
+
+        &:hover {
+            border-color: $dark-accent;
+        }
+    }
+
+    &__stack-label {
+        display: block;
+        font-family: $font-mono;
+        font-size: $font-small;
+        color: $dark-accent;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: $spacing-sm;
+    }
+
+    &__stack-items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xs;
+    }
+
+    &__stack-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: $spacing-sm;
+        font-family: $font-mono;
+        font-size: $font-small;
+        color: $ink;
+        letter-spacing: 0.02em;
+    }
+
+    &__stack-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: $radius-full;
+        background: $accent;
+        opacity: 0.5;
+        flex-shrink: 0;
+    }
+
+    // ---- Progress Bar --------------------------------
+    &__stack-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 6px;
+    }
+ 
+    &__stack-name {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        font-family: $font-mono;
+        font-size: $font-small;
+        color: $ink;
+        letter-spacing: 0.02em;
+    }
+ 
+    &__stack-level {
+        font-family: $font-mono;
+        font-size: $font-small;
+        color: $dark-accent;
+        opacity: 0.7;
+        letter-spacing: 0.04em;
+    }
+ 
+    &__stack-bar {
+        height: 6px;
+        background: $border2;
+        border-radius: 99px;
+        overflow: hidden;
+        width: 80px;
+    }
+ 
+    &__stack-fill {
+        display: block;
+        height: 100%;
+        background: linear-gradient(90deg, $accent, rgba($accent, 0.5));
+        border-radius: 99px;
+        transition: width 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
