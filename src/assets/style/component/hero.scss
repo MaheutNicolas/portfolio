@@ -126,53 +126,6 @@
         }
     }
 
-    &__action-primary {
-        display: inline-flex;
-        align-items: center;
-        gap: $spacing-sm;
-        padding: 14px $spacing-lg;
-        background: $accent;
-        border: 1px solid $accent;
-        border-radius: $radius-md;
-        font-family: $font-mono;
-        font-size: $font-small;
-        font-weight: 600;
-        color: #fff;
-        text-decoration: none;
-        letter-spacing: 0.04em;
-        transition: background 200ms ease, transform 200ms ease, box-shadow 200ms ease;
-
-        &:hover {
-            background: $accent;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba($accent, 0.3);
-        }
-    }
-
-    &__action-secondary {
-        display: inline-flex;
-        align-items: center;
-        gap: $spacing-sm;
-        padding: 13px $spacing-lg;
-        background: transparent;
-        border: 1.5px solid $border2;
-        border-radius: $radius-md;
-        font-family: $font-mono;
-        font-size: $font-small;
-        font-weight: 600;
-        color: $ink;
-        text-decoration: none;
-        letter-spacing: 0.04em;
-        transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
-
-        &:hover {
-            border-color: $accent;
-            color: $accent;
-            background: rgba($accent, 0.04);
-            transform: translateY(-2px);
-        }
-    }
-
     &__scroll {
         width: 100%;
         position: relative;

@@ -20,7 +20,7 @@
           </li>
         </ul>
 
-        <a :href="ctaTo" class="header__cta">
+        <a :href="ctaTo" class="btn primary">
           {{ ctaLabel }}
         </a>
       </nav>
@@ -62,7 +62,7 @@
       </a>
       </nav>
 
-      <a :to="ctaTo" class="header__cta" @click="closeMenu">
+      <a :to="ctaTo" class="btn primary" @click="closeMenu">
         {{ ctaLabel }}
       </a>
     </div>
@@ -78,7 +78,7 @@ const props = defineProps({
     type: Array,
     default: () => [
       { label: 'Accueil', to: '#hero' },
-      { label: 'projet',   to: '' },
+      { label: 'projet',   to: '#project' },
       { label: 'Parcours',   to: '' },
       { label: 'Compétences', to: '' },
     ]

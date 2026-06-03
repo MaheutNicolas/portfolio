@@ -14,10 +14,10 @@
                 <p class="hero__subtitle">{{ hero.subtitle }}</p>
 
                 <div class="hero__actions">
-                <a :href="hero.ctaPrimary.to" class="hero__action-primary">
+                <a :href="hero.ctaPrimary.to" class="btn primary">
                     {{ hero.ctaPrimary.label }}
                 </a>
-                <a :href="hero.ctaSecondary.to" class="hero__action-secondary">
+                <a :href="hero.ctaSecondary.to" class="btn secondary">
                     {{ hero.ctaSecondary.label }}
                 </a>
                 </div>

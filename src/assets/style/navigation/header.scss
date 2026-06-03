@@ -181,29 +181,9 @@
     }
 
 	// ---- CTA ------------------------------------------
-	&__cta {
-		display: inline-flex;
-		align-items: center;
-		gap: $spacing-xs;
+	.btn {
 		padding: 8px $spacing-md;
-		background: $accent;
-		border: 1px solid $accent;
-		border-radius: $radius-md;
-		font-family: $font-mono;
-		font-size: $font-small;
-		font-weight: 600;
-		color: #fff;
-		text-decoration: none;
-		letter-spacing: 0.04em;
-		transition: background 200ms ease, transform 200ms ease, box-shadow 200ms ease;
-		cursor: pointer;
-
-		&:hover {
-			background: $accent;
-			transform: translateY(-1px);
-			box-shadow: 0 4px 14px rgba($accent, 0.3);
-		}
-
+		
 		@include md { max-width: fit-content;}
     }
 

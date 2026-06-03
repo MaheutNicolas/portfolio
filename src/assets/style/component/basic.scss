@@ -1,51 +1,6 @@
 @use '../shared.scss' as *;
 
 // ------------------------------------------------------------
-// TAGS 
-// ------------------------------------------------------------
-
-.tag {
-  display: inline-flex;
-  align-items: center;
-  gap: $spacing-xs;
-  padding: 3px $spacing-sm;
-  border-radius: $radius-full;
-  font-family: $font-mono;
-  font-size: $font-small;
-  text-transform: uppercase;
-  background: $surface;
-  border: 1px solid $border;
-  color: $text-muted;
-
-  &__accent { background: rgba($accent, 0.1);  border-color: rgba($accent, 0.3);  color: $light-accent; }
-  &__red  { background: rgba($red,  0.1);  border-color: rgba($red,  0.3);  color: $light-red; }
-}
-
-// ------------------------------------------------------------
-// CARDS
-// ------------------------------------------------------------
-
-.card {
-  padding: $spacing-lg;
-
-  &__glass { @include glass; }
-}
-
-// ------------------------------------------------------------
-// DIVIDERS
-// ------------------------------------------------------------
-
-.divider {
-  border: none;
-  border-top: 1px solid $border;
-  margin: $spacing-lg 0;
-
-  &__accent {
-    border-color: rgba($accent, 0.2);
-  }
-}
-
-// ------------------------------------------------------------
 // BUTTTON
 // ------------------------------------------------------------
 
@@ -53,41 +8,40 @@
     display: inline-flex;
     align-items: center;
     gap: $spacing-sm;
-    padding: $spacing-sm $spacing-lg;
+    padding: 14px $spacing-lg;
+    border: 1px solid $accent;
     border-radius: $radius-md;
-    font-family: $font-display;
+    font-family: $font-mono;
     font-size: $font-small;
-    text-transform: uppercase;
-    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.04em;
 
     &.primary {
         background: $accent;
         border: 1px solid $accent;
-        color: $light-accent;
+        color: $text-inverse;
+        transition: background 200ms ease, transform 200ms ease, box-shadow 200ms ease;
 
         &:hover {
-            background: rgba($accent, 0.18);
-            border-color: $light-accent;
-            color: $light-accent;
+            background: $accent;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba($accent, 0.3);
         }
     }
 
-    &.light {
+    &.secondary {
         background: transparent;
-        border: 1px solid $border;
-        color: $text-muted;
+        border: 1.5px solid $border2;
+        color: $ink;
+        transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
 
         &:hover {
-            border-color: $border2;
-            color: $text;
-            background: $surface;
+            border-color: $accent;
+            color: $accent;
+            background: rgba($accent, 0.04);
+            transform: translateY(-2px);
         }
-    }
-
-
-    &__icon {
-        padding: $spacing-sm;
-        border-radius: $radius-md;
     }
 
     &:disabled {
