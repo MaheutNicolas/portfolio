@@ -137,12 +137,14 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: $surface;
 		flex-direction: column;
 		padding: $spacing-xl $spacing-lg;
 		gap: $spacing-md;
 		width: 100%;
 		height: min-content;
+		background: rgba($surface, 0.95);
+		backdrop-filter: blur(16px) saturate(160%);
+		-webkit-backdrop-filter: blur(16px) saturate(160%);
 
 		&--open {
 			display: none;

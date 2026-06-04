@@ -4,7 +4,7 @@ import { ref } from 'vue'
 const projects = [
     {
         title:       'Akasha',
-        image:       '',
+        image:       'Akasha.webp',
         period:      '2026 — en cours',
         description: 'Jeu web à interface terminal magique. Système de runes ASCII, pathfinding ennemi BFS, carte SVG interactive et architecture événementielle Symfony.',
         stack:       ['PHP / Symfony', 'Vue.js 3', 'PostgreSQL', 'SCSS'],
@@ -13,7 +13,7 @@ const projects = [
     },
     {
         title:       'Librairie Backend',
-        image:       '',
+        image:       'Librairie.webp',
         period:      '2026',
         description: 'Développement du back-end d’une application de gestion de livres dans le cadre de ma formation. Mise en place d’une API REST, gestion des données et implémentation de la logique métier.',
         stack:       ['Node.js', 'Express.js'],
@@ -22,7 +22,7 @@ const projects = [
     },
     {
         title:       'Kasa Frontend',
-        image:       '',
+        image:       'Kasa.webp',
         period:      '2026',
         description: 'Développement du front-end d’une application de gestion de logements dans le cadre de ma formation. Création d’une interface utilisateur réactive avec gestion du routage et affichage dynamique des données.',
         stack:       ['React'],
@@ -31,7 +31,7 @@ const projects = [
     },
     {
         title:       'Thibibi',
-        image:       '',
+        image:       'thibibi.webp',
         period:      '2025',
         description: 'Conception et développement du site vitrine d’un coach sportif professionnel afin de mettre en avant ses prestations, ses offres de coaching et ses services.',
         stack:       ['PHP', 'HTML'],
@@ -40,7 +40,7 @@ const projects = [
     },
     {
         title:       'Skorpia',
-        image:       '',
+        image:       'Skorpia.webp',
         period:      '2024 - en cours',
         description: 'Participation à une association de location de serveurs : j’ai contribué, aux côtés d’autres membres de l’association, à la conception et au développement du site web ainsi qu’à l’évolution du back-office.',
         stack:       ['Next.js', 'PHP', 'SQL'],
@@ -48,8 +48,8 @@ const projects = [
         live:        'https://skorpia.fr',
     },
     {
-        title:       'DocInkTattoo',
-        image:       '',
+        title:       'DocInkTatoo',
+        image:       'DocInkTatoo.webp',
         period:      '2024',
         description: 'Création d’un site vitrine pour un tatoueur indépendant, permettant de présenter son univers artistique, sa galerie de réalisations et les informations de contact pour la prise de rendez-vous.', // basé sur le contenu du site :contentReference[oaicite:0]{index=0}
         stack:       ['HTML'],

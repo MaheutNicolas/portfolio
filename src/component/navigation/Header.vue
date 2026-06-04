@@ -78,9 +78,9 @@ const props = defineProps({
     type: Array,
     default: () => [
       { label: 'Accueil', to: '#hero' },
-      { label: 'projet',   to: '#project' },
-      { label: 'Parcours',   to: '' },
-      { label: 'Compétences', to: '' },
+      { label: 'A propos',   to: '#about' },
+      { label: 'projets',   to: '#project' },
+      { label: 'Parcours',   to: '#timeline' },
     ]
   },
   ctaLabel: { type: String, default: 'Contact' },

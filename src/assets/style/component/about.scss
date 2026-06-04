@@ -21,18 +21,6 @@
     background: $bg-deep;
     position: relative;
 
-    &::before {
-        content: '';
-        position: absolute;
-        bottom: -80px;
-        left: -60px;
-        width: 480px;
-        height: 480px;
-        background: radial-gradient(circle, rgba($accent, 0.06) 0%, transparent 65%);
-        pointer-events: none;
-        z-index: 0;
-    }
-
     // ---- Inner ------------------------------------------------
     &__inner {
         position: relative;

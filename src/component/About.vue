@@ -38,7 +38,7 @@ const about = {
 </script>
 
 <template>
-  <section class="about">
+  <section class="about" id="about">
     <div class="about__inner">
 
       <div class="about__content">
