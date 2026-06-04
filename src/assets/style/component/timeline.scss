@@ -105,6 +105,7 @@
     }
 
     &__track-container {
+        position: relative;
         display: flex;
         padding: 0px $spacing-xl;
     }
@@ -112,7 +113,7 @@
     // ---- Line ---------------------------------------
     &__line {
         position: absolute;
-        top: calc($spacing-lg + 8px);
+        top: 6px;
         left: 0;
         right: 0;
         height: 4px;

@@ -1266,12 +1266,13 @@ input, textarea {
   mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
 }
 .timeline__track-container {
+  position: relative;
   display: flex;
   padding: 0px 36px;
 }
 .timeline__line {
   position: absolute;
-  top: 36px;
+  top: 6px;
   left: 0;
   right: 0;
   height: 4px;
