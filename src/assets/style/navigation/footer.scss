@@ -1,14 +1,116 @@
 @use '../shared.scss' as *;
 
 .footer {
-  border-top: 1px solid $border;
   background: $surface;
-  height: $footer-height;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 $spacing-lg;
-  gap: $spacing-lg;
-  
-  &__version { color: $light-accent; }
+  border-top: 1px solid $border;
+  padding: $spacing-xl 40px $spacing-lg;
+
+  &__inner {
+    max-width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-lg;
+    flex-wrap: wrap;
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  &__name {
+    font-family: $font-display;
+    font-size: 20px;
+    font-weight: 700;
+    color: $ink;
+    letter-spacing: -0.02em;
+  }
+
+  &__tagline {
+    font-family: $font-mono;
+    font-size: 12px;
+    color: $text-dim;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 14px;
+    border: 1px solid $border;
+    border-radius: $radius-sm;
+    font-family: $font-mono;
+    font-size: 12px;
+    font-weight: 500;
+    color: $light-ink;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+
+    svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+    &:hover {
+      border-color: $accent;
+      color: $accent;
+      background: rgba($accent, 0.05);
+    }
+  }
+
+  &__divider {
+    height: 1px;
+    background: $border;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+  }
+
+  &__copy {
+    font-family: $font-mono;
+    font-size: 12px;
+    color: $text-dim;
+    letter-spacing: 0.04em;
+
+    span { color: $accent; }
+  }
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: $font-mono;
+    font-size: 12px;
+    color: $text-muted;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+
+    svg { width: 13px; height: 13px; transition: transform 0.2s; }
+
+    &:hover {
+      color: $accent;
+      svg { transform: translateY(-2px); }
+    }
+  }
 }

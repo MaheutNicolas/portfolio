@@ -8,5 +8,4 @@
 import Header from '@/component/navigation/Header.vue'
 import Footer from '@/component/navigation/Footer.vue'
 import Home from '@/page/Home.vue'
-
 </script>

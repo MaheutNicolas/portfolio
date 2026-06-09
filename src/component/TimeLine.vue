@@ -5,7 +5,6 @@ const TYPE_LABEL = {
   formation:     'Formation',
   experience:    'Expérience',
   projet:        'Projet perso',
-  certification: 'Certification',
 }
 
 const TYPE_COLOR = {
@@ -22,42 +21,56 @@ const timeline = {
   items: [
     {
       type:        'formation',
-      period:      '2019 — 2021',
+      period:      '2015 — 2018',
       title:       'BTS Hôtellerie-Restauration',
-      place:       'Besançon',
-      description: 'Parcours atypique qui m\'a appris la rigueur, le sens du détail et la gestion sous pression — des qualités directement transposables au développement.',
+      place:       'Dijon',
+      description: 'La restauration m\'a appris la rigueur, le sens du détail et la gestion sous pressions. des qualités directement transposables au développement.',
     },
     {
       type:        'projet',
-      period:      '2021',
+      period:      '2020',
       title:       'Premiers pas en autodidacte',
       place:       'Personnel',
-      description: 'Découverte du développement web par curiosité : HTML, CSS, JavaScript. Premiers projets expérimentaux et plongée dans les ressources en ligne.',
+      description: 'Découverte du monde du développement par curiosité : en Java. Premiers projets expérimentaux et plongée dans les ressources en ligne.',
     },
     {
       type:        'formation',
-      period:      '2022 — 2023',
+      period:      '2023',
+      title:       'CS50X',
+      place:       'En ligne',
+      description: "Formation gratuite d'Harvard couvrant les fondamentaux de l'informatique et du développement (C, Python, SQL, Web)",
+    },
+    {
+      type:        'experience',
+      period:      '2024 — en cours',
+      title:       'Développeur bénévole chez Skorpia',
+      place:       'Télétravail',
+      description: "Développement bénévole du site web et des outils internes d'une association d'hébergement web.",
+    },
+    {
+      type:        'experience',
+      period:      '2024 — 2025',
+      title:       'Développeur junior chez Taketik',
+      place:       'Télétravail',
+      description: 'Développement de sites vitrines optimisés SEO, landing pages et applications web pour des clients variés.',
+    },
+    {
+      type:        'projet',
+      period:      '2024 — en cours',
+      title:       'Projets freelance',
+      place:       'Projet personnel',
+      description: "Développement de sites web pour des clients indépendants : DocInkTattoo et Thibibi.",
+    },
+    {
+      type:        'formation',
+      period:      '2026',
       title:       'Formation Développeur Web',
       place:       'OpenClassrooms',
       description: 'Apprentissage structuré des bases du développement fullstack. Projets React, Node.js/Express, MongoDB et méthodologie Agile Scrum.',
     },
     {
-      type:        'certification',
-      period:      '2023',
-      title:       'Titre Professionnel Développeur Web',
-      place:       'RNCP Niveau 5',
-      description: 'Certification reconnue par l\'État validant les compétences en intégration et développement web.',
-    },
-    {
-      type:        'experience',
-      period:      '2023 — 2024',
-      title:       'Développeur Freelance',
-      place:       'Besançon & remote',
-      description: 'Réalisation de projets clients : sites vitrines SEO, landing pages et applications web. Collaboration avec Skorpia (Rouen).',
-    },
-    {
       type:        'projet',
-      period:      '2024 — en cours',
+      period:      '2026 — en cours',
       title:       'Akasha',
       place:       'Projet personnel',
       description: 'Jeu web à interface terminal magique. Symfony, Vue.js 3, PostgreSQL, système de runes, carte SVG interactive et architecture événementielle.',
@@ -112,7 +125,7 @@ onUnmounted(() => {
     <div class="timeline__header">
       <span class="timeline__label">{{ timeline.label }}</span>
       <h2 class="timeline__title">
-        {{ timeline.title }}<br>
+        {{ timeline.title }} 
         <span class="timeline__title--accent">{{ timeline.titleAccent }}</span>
       </h2>
       <p class="timeline__hint">
