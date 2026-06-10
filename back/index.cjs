@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config({ path: "/var/www/portfolio/back/.env" });
 const express = require("express");
 const nodemailer = require("nodemailer");
 
@@ -6,11 +6,12 @@ const app = express();
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
-  host: "sandbox.smtp.mailtrap.io",
-  port: 2525,
+  host: "live.smtp.mailtrap.io",
+  port: 587,
   auth: {
-    user: process.env.MAILTRAP_USER,
-    pass: process.env.MAILTRAP_PASS,
+    type: "LOGIN",
+    user: "api",
+    pass: process.env.MAILTRAP_TOKEN,
   },
 });
 
@@ -23,7 +24,7 @@ app.post("/send-email", async (req, res) => {
   let subject = "Nouveau Contact";
   try {
         const info = await transporter.sendMail({
-      from: '"Mon App" <no-reply@monapp.com>',
+      from: '"Maheut Nicolas CV" <contact@maheutnicolascv.fr>',
       to,
       subject,
       text,

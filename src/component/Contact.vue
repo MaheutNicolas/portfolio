@@ -95,7 +95,13 @@ async function handleSubmit() {
   if (!validate()) return
   loading.value = true
   // Remplace par ton appel API / EmailJS / etc.
-  await new Promise(r => setTimeout(r, 1200))
+  await fetch('https://maheutnicolascv.fr/api/send-email', {
+    method: 'POST',
+    headers: { 
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(form)
+  });
   submitted.value = true
   loading.value = false
   Object.assign(form, { name: '', email: '', subject: '', message: '' })
