@@ -68,15 +68,15 @@ p {
 }
 
 .text-muted {
-  color: #64748b;
+  color: #4a5667;
 }
 
 .text-dim {
-  color: #a0aab8;
+  color: #5a616c;
 }
 
 .text-error {
-  color: #c4504a;
+  color: #ba433d;
 }
 
 .text-center {
@@ -325,7 +325,7 @@ input, textarea {
 .footer__tagline {
   font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
-  color: #a0aab8;
+  color: #5a616c;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -373,7 +373,7 @@ input, textarea {
 .footer__copy {
   font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
-  color: #a0aab8;
+  color: #5a616c;
   letter-spacing: 0.04em;
 }
 .footer__copy span {
@@ -385,7 +385,7 @@ input, textarea {
   gap: 6px;
   font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
-  color: #64748b;
+  color: #4a5667;
   text-decoration: none;
   letter-spacing: 0.04em;
   transition: color 0.2s;
@@ -456,7 +456,7 @@ input, textarea {
   font-family: "IBM Plex Mono", monospace;
   font-size: 15px;
   font-weight: 500;
-  color: #64748b;
+  color: #4a5667;
   text-decoration: none;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -571,7 +571,7 @@ input, textarea {
   font-family: "Playfair Display", serif;
   font-size: clamp(20px, 3.5vw, 45px);
   font-weight: 400;
-  color: #64748b;
+  color: #4a5667;
   text-decoration: none;
   padding: 8px 0;
   transition: color 160ms ease, transform 160ms ease;
@@ -731,7 +731,7 @@ input, textarea {
 }
 .hero__subtitle {
   font-size: clamp(16px, 1.8vw, 18px);
-  color: #64748b;
+  color: #4a5667;
   line-height: 1.75;
   max-width: 50%;
 }
@@ -770,7 +770,7 @@ input, textarea {
   gap: 4px;
   font-family: "IBM Plex Mono", monospace;
   font-size: 15px;
-  color: #a0aab8;
+  color: #5a616c;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   animation: float 3s ease-in-out infinite;
@@ -1077,7 +1077,7 @@ input, textarea {
 .projects__card-period {
   font-family: "IBM Plex Mono", monospace;
   font-size: 15px;
-  color: #a0aab8;
+  color: #5a616c;
   letter-spacing: 0.06em;
 }
 .projects__card-title {
@@ -1180,7 +1180,7 @@ input, textarea {
 .projects__modal-period {
   font-family: "IBM Plex Mono", monospace;
   font-size: 15px;
-  color: #a0aab8;
+  color: #5a616c;
   letter-spacing: 0.06em;
 }
 .projects__modal-title {
@@ -1193,7 +1193,7 @@ input, textarea {
 }
 .projects__modal-desc {
   font-size: clamp(16px, 1.8vw, 18px);
-  color: #64748b;
+  color: #4a5667;
   line-height: 1.75;
   margin: 0;
 }
@@ -1340,7 +1340,7 @@ input, textarea {
   gap: 4px;
   font-family: "IBM Plex Mono", monospace;
   font-size: 15px;
-  color: #a0aab8;
+  color: #5a616c;
   letter-spacing: 0.06em;
   margin: 0;
 }
@@ -1406,16 +1406,16 @@ input, textarea {
   box-shadow: 0 0 0 4px rgba(47, 107, 224, 0.2);
 }
 .timeline__dot--green {
-  background: #3aab72;
-  box-shadow: 0 0 0 4px rgba(58, 171, 114, 0.2);
+  background: #217b4e;
+  box-shadow: 0 0 0 4px rgba(33, 123, 78, 0.2);
 }
 .timeline__dot--red {
-  background: #c4504a;
-  box-shadow: 0 0 0 4px rgba(196, 80, 74, 0.2);
+  background: #ba433d;
+  box-shadow: 0 0 0 4px rgba(186, 67, 61, 0.2);
 }
 .timeline__dot--amber {
-  background: #c9893a;
-  box-shadow: 0 0 0 4px rgba(201, 137, 58, 0.2);
+  background: #bf7e30;
+  box-shadow: 0 0 0 4px rgba(191, 126, 48, 0.2);
 }
 .timeline__item:hover .timeline__dot {
   transform: scale(1.4);
@@ -1449,26 +1449,26 @@ input, textarea {
   border-color: #2f6be0;
 }
 .timeline__card--green {
-  border-top: 3px solid #3aab72;
+  border-top: 3px solid #217b4e;
 }
 .timeline__card--green:hover {
-  border-color: #3aab72;
+  border-color: #217b4e;
 }
 .timeline__card--red {
-  border-top: 3px solid #c4504a;
+  border-top: 3px solid #ba433d;
 }
 .timeline__card--red:hover {
-  border-color: #c4504a;
+  border-color: #ba433d;
 }
 .timeline__card--amber {
-  border-top: 3px solid #c9893a;
+  border-top: 3px solid #bf7e30;
 }
 .timeline__card--amber:hover {
-  border-color: #c9893a;
+  border-color: #bf7e30;
 }
 .timeline__card-type {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1477,18 +1477,18 @@ input, textarea {
   color: #2f6be0;
 }
 .timeline__card--green .timeline__card-type {
-  color: #3aab72;
+  color: #217b4e;
 }
 .timeline__card--red .timeline__card-type {
-  color: #c4504a;
+  color: #ba433d;
 }
 .timeline__card--amber .timeline__card-type {
-  color: #c9893a;
+  color: #bf7e30;
 }
 .timeline__card-period {
   font-family: "IBM Plex Mono", monospace;
   font-size: 15px;
-  color: #a0aab8;
+  color: #5a616c;
   letter-spacing: 0.06em;
 }
 .timeline__card-title {
@@ -1506,12 +1506,12 @@ input, textarea {
   gap: 4px;
   font-family: "IBM Plex Mono", monospace;
   font-size: 15px;
-  color: #64748b;
+  color: #4a5667;
   letter-spacing: 0.02em;
 }
 .timeline__card-desc {
   font-size: 15px;
-  color: #64748b;
+  color: #4a5667;
   line-height: 1.65;
   margin: 4px 0 0;
 }
@@ -1530,7 +1530,7 @@ input, textarea {
   gap: 8px;
   font-family: "IBM Plex Mono", monospace;
   font-size: 15px;
-  color: #64748b;
+  color: #4a5667;
   letter-spacing: 0.04em;
 }
 .timeline__legend-dot {
@@ -1543,13 +1543,13 @@ input, textarea {
   background: #2f6be0;
 }
 .timeline__legend-dot--green {
-  background: #3aab72;
+  background: #217b4e;
 }
 .timeline__legend-dot--red {
-  background: #c4504a;
+  background: #ba433d;
 }
 .timeline__legend-dot--amber {
-  background: #c9893a;
+  background: #bf7e30;
 }
 
 .contact {
@@ -1616,7 +1616,7 @@ input, textarea {
 }
 .contact__subtitle {
   font-size: clamp(16px, 1.8vw, 18px);
-  color: #64748b;
+  color: #4a5667;
   line-height: 1.75;
   margin-bottom: 36px;
 }
@@ -1647,17 +1647,17 @@ input, textarea {
   align-items: center;
   gap: 16px;
   padding: 16px 28px;
-  background: rgba(58, 171, 114, 0.08);
-  border: 1px solid rgba(58, 171, 114, 0.3);
+  background: rgba(33, 123, 78, 0.08);
+  border: 1px solid rgba(33, 123, 78, 0.3);
   border-radius: 9px;
   font-size: 14px;
-  color: #3aab72;
+  color: #217b4e;
   font-family: "IBM Plex Mono", monospace;
 }
 .contact__success-icon {
   width: 20px;
   height: 20px;
-  background: #3aab72;
+  background: #217b4e;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1702,7 +1702,7 @@ input, textarea {
   appearance: none;
 }
 .form-group input::placeholder, .form-group textarea::placeholder, .form-group select::placeholder {
-  color: #a0aab8;
+  color: #5a616c;
 }
 .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
   border-color: #2f6be0;
@@ -1710,8 +1710,8 @@ input, textarea {
   background: #ffffff;
 }
 .form-group input.error, .form-group textarea.error, .form-group select.error {
-  border-color: #c4504a;
-  box-shadow: 0 0 0 3px rgba(196, 80, 74, 0.1);
+  border-color: #ba433d;
+  box-shadow: 0 0 0 3px rgba(186, 67, 61, 0.1);
 }
 .form-group textarea {
   resize: vertical;
@@ -1732,13 +1732,13 @@ input, textarea {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #a0aab8;
+  border-top: 5px solid #5a616c;
   pointer-events: none;
 }
 
 .form-hint {
   font-size: 12px;
-  color: #c4504a;
+  color: #ba433d;
   font-family: "IBM Plex Mono", monospace;
 }
 
@@ -1758,7 +1758,7 @@ input, textarea {
 
 .form-note {
   font-size: 12px;
-  color: #a0aab8;
+  color: #5a616c;
   font-family: "IBM Plex Mono", monospace;
   line-height: 1.5;
 }
