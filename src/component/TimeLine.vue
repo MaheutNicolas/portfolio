@@ -57,16 +57,16 @@ const timeline = {
     {
       type:        'projet',
       period:      '2024 — en cours',
-      title:       'Projets freelance',
+      title:       'Projets Bénévoles',
       place:       'Projet personnel',
-      description: "Développement de sites web pour des clients indépendants : DocInkTattoo et Thibibi.",
+      description: "Développement de sites web pour des amis indépendants : DocInkTattoo et Thibibi.",
     },
     {
       type:        'formation',
       period:      '2026',
       title:       'Formation Développeur Web',
       place:       'OpenClassrooms',
-      description: 'Apprentissage structuré des bases du développement fullstack. Projets React, Node.js/Express, MongoDB et méthodologie Agile Scrum.',
+      description: 'Apprentissage structuré des bases du développement fullstack. Projets React, Node.js/Express, MongoDB et méthodologie Agile Scrum, notamment.',
     },
     {
       type:        'projet',

@@ -97,12 +97,11 @@ function onBackdrop(e) {
       <!-- Grille de cartes -->
       <ul class="projects__grid" role="list">
         <li
-          v-for="project in projects"
+          v-for="project, index in projects"
           :key="project.title"
           class="projects__card"
           @click="open(project)"
           role="button"
-          tabindex="0"
           :aria-label="`Voir le projet ${project.title}`"
           @keydown.enter="open(project)"
           @keydown.space.prevent="open(project)"

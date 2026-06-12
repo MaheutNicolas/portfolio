@@ -3,8 +3,8 @@ const about = {
   label:    'À propos',
   name:     'Maheut Nicolas',
   intro: [
-    'Développeur autodidacte, j\'ai commencé à coder par pure curiosité — cette même curiosité qui me pousse à explorer, déconstruire et comprendre comment les choses fonctionnent vraiment.',
-    'Mon parcours est atypique : titulaire d\'un BTS en hôtellerie-restauration, j\'ai bifurqué vers le développement web en suivant ma propre route. Une école du terrain qui forge une façon de résoudre les problèmes différemment.',
+    'Développeur autodidacte, j\'ai commencé à coder par pure curiosité. Cette même curiosité qui me pousse à explorer, déconstruire et comprendre comment les choses fonctionnent vraiment.',
+    'Mon parcours est atypique : titulaire d\'un BTS en hôtellerie-restauration, j\'ai bifurqué vers le développement web en suivant ma propre route. Une école qui forge une façon de résoudre les problèmes différemment.',
   ],
   stacks: [
     {
