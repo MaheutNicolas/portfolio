@@ -54,7 +54,7 @@
         <a
           v-for="link in links"
           :key="link.to"
-          :to="link.to"
+          :href="link.to"
           class="header__mobile-link"
           @click="closeMenu"
         >
@@ -62,7 +62,7 @@
       </a>
       </nav>
 
-      <a :to="ctaTo" class="btn primary" @click="closeMenu">
+      <a :href="ctaTo" class="btn primary" @click="closeMenu">
         {{ ctaLabel }}
       </a>
     </div>
@@ -77,10 +77,10 @@ const props = defineProps({
   links: {
     type: Array,
     default: () => [
-      { label: 'Accueil', to: '#hero' },
-      { label: 'A propos',   to: '#about' },
+      { label: 'Accueil',   to: '#hero' },
+      { label: 'A propos',  to: '#about' },
       { label: 'projets',   to: '#project' },
-      { label: 'Parcours',   to: '#timeline' },
+      { label: 'Parcours',  to: '#timeline' },
     ]
   },
   ctaLabel: { type: String, default: 'Contact' },

@@ -39,7 +39,7 @@ const hero = {
   titleAccent:  'expériences web',
   titleAfter:   'qui ont du sens.',
   subtitle:     'Fullstack JS & PHP, passionné par les interfaces soignées, les architectures propres et les projets qui défient la norme.',
-  ctaPrimary:   { label: 'Voir mes projets', to: '#projets' },
+  ctaPrimary:   { label: 'Voir mes projets', to: '#project' },
   ctaSecondary: { label: 'Me contacter',     to: '#contact' },
 }
 </script>

@@ -8,16 +8,18 @@ const projects = [
         image:       'Akasha.webp',
         period:      '2026 — en cours',
         description: 'Jeu web à interface terminal magique. Système de runes ASCII, pathfinding ennemi BFS, carte SVG interactive et architecture événementielle Symfony.',
+        reward:      'J\'ai pu mettre en pratique l\'ensemble des connaissances acquises jusqu\'à présent pour mener à bien un projet d\'envergure.',
         stack:       ['PHP / Symfony', 'Vue.js 3', 'PostgreSQL', 'SCSS'],
         github:      'https://github.com/MaheutNicolas/Akasha_Back',
-        github2:      'https://github.com/MaheutNicolas/Akasha_Front',
+        github2:     'https://github.com/MaheutNicolas/Akasha_Front',
         live:        '',
     },
     {
-        title:       'Librairie Backend',
+        title:       'Mon Vieux Grimoire',
         image:       'Librairie.webp',
         period:      '2026',
-        description: 'Développement du back-end d’une application de gestion de livres dans le cadre de ma formation. Mise en place d’une API REST, gestion des données et implémentation de la logique métier.',
+        description: 'Développement du back-end d\'une application de gestion de livres dans le cadre de ma formation. Mise en place d\'une API REST, gestion des données et implémentation de la logique métier.',
+        reward:      'Ce projet m\'a permis de découvrir Node.js et Express',
         stack:       ['Node.js', 'Express.js'],
         github:      'https://github.com/MaheutNicolas/projet6_backend',
         live:        '',
@@ -26,7 +28,8 @@ const projects = [
         title:       'Kasa Frontend',
         image:       'Kasa.webp',
         period:      '2026',
-        description: 'Développement du front-end d’une application de gestion de logements dans le cadre de ma formation. Création d’une interface utilisateur réactive avec gestion du routage et affichage dynamique des données.',
+        description: 'Développement du front-end d\'une application de gestion de logements dans le cadre de ma formation. Création d\'une interface utilisateur réactive avec gestion du routage et affichage dynamique des données.',
+        reward:      'J\'ai consolidé mes bases en React, notamment sur la gestion du routage sous celuil-ci',
         stack:       ['React'],
         github:      'https://github.com/MaheutNicolas/Projet5',
         live:        '',
@@ -35,7 +38,8 @@ const projects = [
         title:       'Thibibi',
         image:       'thibibi.webp',
         period:      '2025',
-        description: 'Conception et développement du site vitrine d’un coach sportif professionnel afin de mettre en avant ses prestations, ses offres de coaching et ses services.',
+        description: 'Conception et développement du site vitrine d\'un coach sportif professionnel afin de mettre en avant ses prestations, ses offres de coaching et ses services.',
+        reward:      'Deuxième site livré à une tierce personne, avec un vrai travail sur le relationnel client.',
         stack:       ['PHP', 'HTML'],
         github:      '',
         live:        'https://thibibi.fr',
@@ -44,7 +48,8 @@ const projects = [
         title:       'Skorpia',
         image:       'Skorpia.webp',
         period:      '2024 - en cours',
-        description: 'Participation à une association de location de serveurs : j’ai contribué, aux côtés d’autres membres de l’association, à la conception et au développement du site web ainsi qu’à l’évolution du back-office.',
+        description: 'Participation à une association de location de serveurs : j\'ai contribué, aux côtés d\'autres membres de l\'association, à la conception et au développement du site web ainsi qu\'à l\'évolution du back-office.',
+        reward:      'Une première expérience de travail en équipe sur un projet durable, avec une vraie continuité dans le développement.',
         stack:       ['Next.js', 'PHP', 'SQL'],
         github:      '',
         live:        'https://skorpia.fr',
@@ -53,7 +58,8 @@ const projects = [
         title:       'DocInkTatoo',
         image:       'DocInkTatoo.webp',
         period:      '2024',
-        description: 'Création d’un site vitrine pour un tatoueur indépendant, permettant de présenter son univers artistique, sa galerie de réalisations et les informations de contact pour la prise de rendez-vous.', // basé sur le contenu du site :contentReference[oaicite:0]{index=0}
+        description: 'Création d\'un site vitrine pour un tatoueur indépendant, permettant de présenter son univers artistique, sa galerie de réalisations et les informations de contact pour la prise de rendez-vous.',
+        reward:      ' Un des tout premiers sites que j\'ai construits pour une tierce personne, qui m\'a donné le goût du développement web.',
         stack:       ['HTML'],
         github:      '',
         live:        'https://docinktatoo.fr',
@@ -102,7 +108,7 @@ function onBackdrop(e) {
           @keydown.space.prevent="open(project)"
         >
           <div class="projects__card-img">
-            <img v-if="project.image" :src="project.image" :alt="project.title" />
+            <img v-if="project.image" :src="project.image" :alt="project.title" loading="lazy" />
             <span v-else class="projects__card-placeholder" aria-hidden="true">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.25"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
             </span>
@@ -155,6 +161,7 @@ function onBackdrop(e) {
               <span class="projects__modal-period">{{ selected.period }}</span>
               <h3 class="projects__modal-title">{{ selected.title }}</h3>
               <p class="projects__modal-desc">{{ selected.description }}</p>
+              <p class="projects__modal-desc">{{ selected.reward }}</p>
 
               <div class="projects__modal-section">
                 <span class="projects__modal-section-label">Stack technique</span>
