@@ -30,14 +30,6 @@ The site is built as a Vue 3 single-page application with a custom SCSS design s
 ```
 .
 ├── public/
-│   ├── Akasha.webp
-│   ├── DocInkTatoo.webp
-│   ├── Kasa.webp
-│   ├── Librairie.webp
-│   ├── Skorpia.webp
-│   ├── thibibi.webp
-│   ├── favicon.ico
-│   ├── og-image.jpg
 │   ├── robots.txt
 │   └── sitemap.xml
 ├── src/
@@ -64,22 +56,16 @@ The site is built as a Vue 3 single-page application with a custom SCSS design s
 │   │   ├── navigation/
 │   │   │   ├── Footer.vue
 │   │   │   └── Header.vue
-│   │   ├── About.vue
+│   │   ├── About.vue               # ↓ All Components call in home page
 │   │   ├── Contact.vue
 │   │   ├── Hero.vue
 │   │   ├── Project.vue
 │   │   └── TimeLine.vue
 │   ├── page/
-│   │   └── Home.vue
-│   ├── App.vue
+│   │   └── Home.vue                # Only page ( application mono-page )
+│   ├── App.vue                     # Start of Vue 
 │   ├── index.css
 │   └── main.js
-├── index.html
-├── jsconfig.json
-├── ngnix.conf
-├── package.json
-├── Todo.txt
-└── vite.config.js
 ```
 
 ---
