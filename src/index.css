@@ -636,9 +636,8 @@ input, textarea {
 
 .hero {
   position: relative;
-  min-height: calc(100vh - 60px);
-  padding-top: 96px;
-  padding-bottom: 36px;
+  min-height: 100vh;
+  padding-top: 60px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -654,6 +653,7 @@ input, textarea {
   background: radial-gradient(circle, rgba(47, 107, 224, 0.07) 0%, transparent 65%);
   pointer-events: none;
   z-index: 0;
+  animation: pulse-blob 8s ease-in-out infinite;
 }
 .hero__inner {
   position: relative;
@@ -673,6 +673,19 @@ input, textarea {
   align-items: center;
   justify-content: center;
   gap: 16px;
+  height: 100%;
+  background: radial-gradient(circle, #f9fafb 0%, #f9fafb 30%, transparent 50%);
+}
+.hero__photo {
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+}
+@media (max-width: 1200px) {
+  .hero__photo {
+    height: 100vh;
+    width: auto;
+  }
 }
 .hero__label {
   display: inline-flex;
@@ -776,7 +789,35 @@ input, textarea {
   animation: float 3s ease-in-out infinite;
   transform: translateX(-50%);
 }
+.hero__anim {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: calc(var(--delay) * 0.1s);
+}
+.hero.is-ready .hero__anim {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+@keyframes drift {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -14px);
+  }
+}
+@keyframes pulse-blob {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.08);
+  }
+}
 .about {
   padding-block: 36px;
   background: #eaecf1;

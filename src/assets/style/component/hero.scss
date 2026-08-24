@@ -2,9 +2,8 @@
 
 .hero {
     position: relative;
-    min-height: calc(100vh - $header-height);
-    padding-top: calc($header-height + $spacing-xl);
-    padding-bottom: $spacing-xl;
+    min-height: 100vh;
+    padding-top: calc($header-height);
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -20,6 +19,7 @@
         background: radial-gradient(circle, rgba($accent, 0.07) 0%, transparent 65%);
         pointer-events: none;
         z-index: 0;
+        animation: pulse-blob 8s ease-in-out infinite;
     }
 
     &__inner {
@@ -41,6 +41,24 @@
         align-items: center;
         justify-content: center;
         gap: $spacing-md;
+        height: 100%;
+        background: radial-gradient(
+            circle,
+            $bg 0%,
+            $bg 30%,
+            transparent 50%
+        );
+    }
+
+    &__photo {
+        width: 100vw;
+        object-fit: cover;
+        position: absolute;
+
+        @include lg {
+            height: 100vh;
+            width: auto;
+        }
     }
 
     &__label {
@@ -151,4 +169,26 @@
             transform: translateX(-50%);
         }
     }
+
+    &__anim {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+        transition-delay: calc(var(--delay) * 0.1s);
+    }
+
+    &.is-ready &__anim {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes drift {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(10px, -14px); }
+}
+
+@keyframes pulse-blob {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.08); }
 }

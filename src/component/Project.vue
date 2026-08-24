@@ -12,7 +12,8 @@ const projects = [
         stack:       ['PHP / Symfony', 'Vue.js 3', 'PostgreSQL', 'SCSS'],
         github:      'https://github.com/MaheutNicolas/Akasha_Back',
         github2:     'https://github.com/MaheutNicolas/Akasha_Front',
-        live:        '',
+        live:        'https://akashagame.fr',
+
     },
     {
         title:       'Mon Vieux Grimoire',
