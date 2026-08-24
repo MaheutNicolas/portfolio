@@ -48,6 +48,10 @@
             $bg 30%,
             transparent 50%
         );
+
+        @include sm {
+            padding-top: calc($header-height + $spacing-xl);
+        }
     }
 
     &__photo {
