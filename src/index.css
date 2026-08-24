@@ -641,7 +641,6 @@ input, textarea {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(160deg, #ffffff 60%, #eaecf1 100%);
 }
 .hero::before {
   content: "";
@@ -650,7 +649,6 @@ input, textarea {
   right: -80px;
   width: 560px;
   height: 560px;
-  background: radial-gradient(circle, rgba(47, 107, 224, 0.07) 0%, transparent 65%);
   pointer-events: none;
   z-index: 0;
   animation: pulse-blob 8s ease-in-out infinite;
