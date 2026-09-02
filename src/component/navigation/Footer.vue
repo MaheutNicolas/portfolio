@@ -21,6 +21,12 @@
               <GitHub />
               GitHub
           </a>
+
+          <a class="footer__link"
+            href="/CV.pdf"
+            target="_blank" rel="noopener">
+              👤 CV
+          </a>
         </nav>
       </div>
 
