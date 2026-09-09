@@ -6,7 +6,7 @@ const projects = [
     {
         title:       'Akasha',
         image:       'Akasha.webp',
-        period:      '2026 — en cours',
+        period:      '2026',
         description: 'Jeu web à interface terminal magique. Système de runes ASCII, pathfinding ennemi BFS, carte SVG interactive et architecture événementielle Symfony.',
         reward:      'J\'ai pu mettre en pratique l\'ensemble des connaissances acquises jusqu\'à présent pour mener à bien un projet d\'envergure.',
         stack:       ['PHP / Symfony', 'Vue.js 3', 'PostgreSQL', 'SCSS'],
