@@ -4,6 +4,16 @@ import GitHub from './icon/GitHub.vue'
 
 const projects = [
     {
+      title:       'CodexBase',
+      image:       'codexbase.webp',
+      period:      '2026',
+      description: 'Application expérimentale conçue pour offrir une mémoire externe à une IA dans le cadre de l\'écriture d\'un livre. Elle repose sur une API et une base de données recensant les événements du récit, exposées via un serveur MCP afin que l\'IA puisse les consulter et les enrichir au fil de l\'écriture.',
+      reward:      'Ce projet m\'a permis d\'approfondir ma compréhension du fonctionnement des IA, du protocole MCP et des façons de les intégrer à un outil sur mesure.',
+      stack:       ['PHP / Symfony', 'PostgreSQL', 'MCP'],
+      github:      'https://github.com/MaheutNicolas/codex',
+      live:        '',
+    },
+    {
         title:       'Akasha',
         image:       'Akasha.webp',
         period:      '2026',
